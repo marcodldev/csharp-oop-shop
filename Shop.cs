@@ -18,16 +18,9 @@ namespace csharp_oop_shop
         public double Prezzo { get; set; }
         public int Iva { get; set; }
 
-        //public Shop()
-        //{
-        //    Random random = new Random();
-        //    Codice = random.Next(0, 1000);
-        //}
-
-        public Shop(int codice, string? nome, string? descrizione, double prezzo, int iva)
+        public Shop(string? nome, string? descrizione, double prezzo, int iva)
         {
             Random random = new Random();
-
             Codice = random.Next(0, 1000);
             Nome = nome;
             Descrizione = descrizione;
