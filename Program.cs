@@ -15,7 +15,7 @@ using csharp_oop_shop;
 //Console.WriteLine($"Prezzo con Iva calcolata: {Powerbank.PrezzoConIva()}");
 //Console.WriteLine($"Nome completo con codice: {Powerbank.NomeCodice()}");
 
-Shop Monitor = new Shop("Monitor Ultra Wide" ,"Monitor ultra sottile", 199.99,22) ;
+Shop Monitor = new Shop(nome:"Monitor Ultra Wide" ,descrizione:"Monitor ultra sottile",prezzo: 199.99,iva: 22) ;
 
 Console.WriteLine("Codice: " + Monitor.Codice);
 Console.WriteLine("Nome: " + Monitor.Nome);
