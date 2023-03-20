@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,10 +27,10 @@ namespace csharp_oop_shop
     Testate poi i vostri oggetti Prodotto, istanziandoli e provando ad interargirci per testare tutti i metodi che avete previsto. */
 
         public int Codice { get; private set; }
-        public string Nome { get; set; }
-        public string Descrizione { get; set; }
+        public string? Nome { get; set; }
+        public string? Descrizione { get; set; }
         public double Prezzo { get; set; }
-        public decimal Iva { get; set; }
+        public int Iva { get; set; }
 
         public Shop()
         {
@@ -37,6 +38,16 @@ namespace csharp_oop_shop
             Codice = random.Next(0, 1000);
         }
 
+
+        public double PrezzoConIva()
+        {
+            return Prezzo + ((Prezzo * Iva) / 100);
+        }
+
+        public string NomeCodice()
+        {
+            return Nome + Codice;
+        }
     }
 
 }
